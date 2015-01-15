@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CGPlayout</class>
+ <widget class="QWidget" name="CGPlayout">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>301</width>
+    <height>225</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Flash Templates</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Shell/Shell.qrc">
+    <normaloff>:/Graphics/Images/CasparCG.ico</normaloff>:/Graphics/Images/CasparCG.ico</iconset>
+  </property>
+  <widget class="QPushButton" name="CGButton">
+   <property name="geometry">
+    <rect>
+     <x>106</x>
+     <y>76</y>
+     <width>90</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Squzee</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../Shell/Shell.qrc"/>
+ </resources>
+ <connections/>
+</ui>

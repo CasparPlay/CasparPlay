@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RundownWidget</class>
+ <widget class="QWidget" name="RundownWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>1</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QTabWidget" name="tabWidgetRundown">
+     <property name="tabsClosable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>tabWidgetRundown</sender>
+   <signal>tabCloseRequested(int)</signal>
+   <receiver>RundownWidget</receiver>
+   <slot>tabCloseRequested(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>802</x>
+     <y>172</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1007</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tabWidgetRundown</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>RundownWidget</receiver>
+   <slot>currentChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>937</x>
+     <y>292</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1015</x>
+     <y>289</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>tabCloseRequested(int)</slot>
+  <slot>currentChanged(int)</slot>
+ </slots>
+</ui>

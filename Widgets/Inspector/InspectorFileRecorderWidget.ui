@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InspectorFileRecorderWidget</class>
+ <widget class="QWidget" name="InspectorFileRecorderWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>226</width>
+    <height>168</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutOutput">
+     <item>
+      <spacer name="horizontalSpacerOutput">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>24</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelOutput">
+       <property name="text">
+        <string>Output</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEditOutput"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutCodec">
+     <item>
+      <spacer name="horizontalSpacerCodec">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>32</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelCodec">
+       <property name="text">
+        <string>Codec</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBoxCodec">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <item>
+        <property name="text">
+         <string>dnxhd</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>libx264</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>prores</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>dvvideo</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>ffvhuff</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>rawvideo</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutPreset">
+     <item>
+      <spacer name="horizontalSpacerPreset">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>31</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelPreset">
+       <property name="text">
+        <string>Preset</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBoxPreset">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>ultrafast</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutTune">
+     <item>
+      <spacer name="horizontalSpacerTune">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>38</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelTune">
+       <property name="text">
+        <string>Tune</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBoxTune">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <item>
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>fastdecode</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutWithAlpha">
+     <item>
+      <spacer name="horizontalSpacerWithAlpha1">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>2</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelWithAlpha">
+       <property name="text">
+        <string>With alpha</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBoxWithAlpha">
+       <property name="layoutDirection">
+        <enum>Qt::RightToLeft</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacerWithAlpha2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacerFileRecorder">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>10</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>labelOutput</sender>
+   <signal>linkActivated(QString)</signal>
+   <receiver>InspectorFileRecorderWidget</receiver>
+   <slot>resetOutput(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>46</x>
+     <y>24</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelCodec</sender>
+   <signal>linkActivated(QString)</signal>
+   <receiver>InspectorFileRecorderWidget</receiver>
+   <slot>resetCodec(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>77</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>84</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBoxCodec</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>InspectorFileRecorderWidget</receiver>
+   <slot>codecChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>215</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>225</x>
+     <y>75</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelPreset</sender>
+   <signal>linkActivated(QString)</signal>
+   <receiver>InspectorFileRecorderWidget</receiver>
+   <slot>resetPreset(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>77</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>2</x>
+     <y>113</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBoxPreset</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>InspectorFileRecorderWidget</receiver>
+   <slot>presetChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>215</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>225</x>
+     <y>102</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelTune</sender>
+   <signal>linkActivated(QString)</signal>
+   <receiver>InspectorFileRecorderWidget</receiver>
+   <slot>resetTune(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>76</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1</x>
+     <y>145</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBoxTune</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>InspectorFileRecorderWidget</receiver>
+   <slot>tuneChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>215</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>225</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEditOutput</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>InspectorFileRecorderWidget</receiver>
+   <slot>outputChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>191</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>225</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>labelWithAlpha</sender>
+   <signal>linkActivated(QString)</signal>
+   <receiver>InspectorFileRecorderWidget</receiver>
+   <slot>resetWithAlpha(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>37</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>37</x>
+     <y>162</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBoxWithAlpha</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>InspectorFileRecorderWidget</receiver>
+   <slot>withAlphaChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>82</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>94</x>
+     <y>165</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>containerChanged(QString)</slot>
+  <slot>resetContainer(QString)</slot>
+  <slot>resetCodec(QString)</slot>
+  <slot>codecChanged(QString)</slot>
+  <slot>resetPreset(QString)</slot>
+  <slot>presetChanged(QString)</slot>
+  <slot>resetTune(QString)</slot>
+  <slot>tuneChanged(QString)</slot>
+  <slot>resetOutput(QString)</slot>
+  <slot>outputChanged(QString)</slot>
+  <slot>resetWithAlpha(QString)</slot>
+  <slot>withAlphaChanged(int)</slot>
+ </slots>
+</ui>

@@ -1,0 +1,541 @@
+/*
+ * MainWindow
+ */
+#MainWindow > #centralWidget
+{
+    background-color: rgba(45, 45, 45, 255);
+}
+
+/*
+ * AddDeviceDialog
+ */
+#toolButtonTestConnection
+{
+    image: url(:/Graphics/Images/TestConnection.png);
+}
+
+/*
+ * SettingsDialog
+ */
+#SettingsDialog
+{
+    background-color: rgba(35, 35, 35, 255);
+    border-bottom-color: rgba(65, 65, 65, 255);
+    border-bottom-width: 1px;
+}
+
+#pushButtonDeleteThumbnails, #pushButtonOk
+{
+    background-color: rgba(28, 28, 28, 255);
+}
+
+#treeWidgetDevice, #treeWidgetTriCasterDevice, #treeWidgetOscOutput
+{
+    image: url(:/Graphics/Images/Add.png);
+}
+
+#tabGeneral, #tabDevices, #tabMixers, #tabGpi, #tabOsc
+{
+    background-color: rgba(35, 35, 35, 255);
+}
+
+#labelSettingsInformation, #labelImportInformation
+{
+    color: rgba(190, 190, 190, 255);
+    font-size: 10px;
+}
+
+#lineStartup, #lineAppearance, #lineLibrary, #lineRundown, #lineInspector, #lineLive, #lineDatabase, #lineOscInput, #lineCasparCG, #lineTriCaster, #lineAtem, #lineGpiDevice, #lineGpiInput, #lineGpiOutput, #lineOscOutput
+{
+    background-color: rgba(65, 65, 65, 255);
+}
+#toolButtonAddDevice, #toolButtonAddTriCasterDevice, #toolButtonAddAtemDevice, #toolButtonAddOscOutput, #toolButtonAddTemplateData, #toolButtonAddHttpData
+{
+    background-color: rgba(28, 28, 28, 255);
+    image: url(:/Graphics/Images/Add.png);
+}
+#toolButtonAddDevice:hover, #toolButtonAddTriCasterDevice:hover, #toolButtonAddAtemDevice:hover, #toolButtonAddOscOutput:hover, #toolButtonAddTemplateData:hover, #toolButtonAddHtppData:hover
+{
+    image: url(:/Graphics/Images/AddHover.png);
+}
+#toolButtonRemoveDevice, #toolButtonRemoveTriCasterDevice, #toolButtonRemoveAtemDevice, #toolButtonRemoveOscOutput, #toolButtonRemoveTemplateData, #toolButtonRemoveHttpData
+{
+    background-color: rgba(28, 28, 28, 255);
+    image: url(:/Graphics/Images/Remove.png);
+}
+#toolButtonRemoveDevice:hover, #toolButtonRemoveTriCasterDevice:hover, #toolButtonRemoveAtemDevice:hover, #toolButtonRemoveOscOutput:hover, #toolButtonRemoveTemplateData:hover, #toolButtonRemoveHttpData:hover
+{
+    image: url(:/Graphics/Images/RemoveHover.png);
+}
+#toolButtonImportDevice, #toolButtonImportTriCasterDevice, #toolButtonImportAtemDevice
+{
+    background-color: rgba(28, 28, 28, 255);
+    image: url(:/Graphics/Images/Import.png);
+}
+#toolButtonImportDevice:hover, #toolButtonImportTriCasterDevice:hover, #toolButtonImportAtemDevice:hover
+{
+    image: url(:/Graphics/Images/ImportHover.png);
+}
+
+/*
+ * DeviceFilterWidget
+ */
+#lineEditDeviceFilter
+{
+    background-color: rgba(35, 35, 35, 255);
+    border-width: 0px;
+    min-height: 19px;
+}
+#lineEditDeviceFilter:disabled
+{
+    color: rgba(255, 255, 255, 255);
+}
+
+#comboBoxDeviceFilter
+{
+    background-color: rgba(35, 35, 35, 255);
+}
+#comboBoxDeviceFilter::drop-down
+{
+    background-color: rgba(35, 35, 35, 255);
+}
+#comboBoxDeviceFilter QAbstractItemView
+{
+    background-color: rgba(35, 35, 35, 255);
+}
+
+/*
+ * LibraryWidget
+ */
+#lineEditFilter
+{
+    background-color: rgba(35, 35, 35, 255);
+}
+
+#treeWidgetTool, #treeWidgetAudio, #treeWidgetImage, #treeWidgetTemplate, #treeWidgetVideo, #treeWidgetData, #treeWidgetPreset
+{
+    background-color: rgba(35, 35, 35, 255);
+    border-width: 0px;
+    color: rgba(190, 190, 190, 255);
+}
+#treeWidgetTool
+{
+    border-width: 0px;
+    color: rgba(190, 190, 190, 255);
+}
+#treeWidgetTool::branch:closed:has-children
+{
+    background-color: rgba(45, 45, 45, 255);
+}
+#treeWidgetTool::branch:open:has-children
+{
+    background-color: rgba(45, 45, 45, 255);
+}
+
+/*
+ * InspectorWidget
+ */
+#treeWidgetInspector
+{
+    background-color: rgba(35, 35, 35, 255);
+    border-width: 0px;
+    color: rgba(190, 190, 190, 255);
+}
+#treeWidgetInspector::branch:closed:has-children
+{
+    background-color: rgba(45, 45, 45, 255);
+}
+#treeWidgetInspector::branch:open:has-children
+{
+    background-color: rgba(45, 45, 45, 255);
+}
+
+#treeWidgetInspector QLabel
+{
+    color: rgba(190, 190, 190, 255);
+}
+#treeWidgetInspector QLabel:disabled
+{
+    color: rgba(128, 128, 128, 255);
+}
+
+#checkBoxAllowGpi, #checkBoxAllowRemoteTriggering
+{
+    color: rgba(190, 190, 190, 255);
+}
+
+#toolButtonMasterVolume
+{
+    image: url(:/Graphics/Images/MasterVolumeOn.png);
+    padding: 4px;
+}
+#toolButtonDisableCommand
+{
+    image: url(:/Graphics/Images/DisableCommandOn.png);
+    padding: 2px;
+}
+
+/*
+ * InspectorSolidColorWidget
+ */
+#toolButtonColor
+{
+    image: url(:/Graphics/Images/SolidColorSmall.png);
+}
+
+/*
+ * InspectorTemplateWidget
+ */
+#treeWidgetTemplateData
+{
+    alternate-background-color: rgba(35, 35, 35, 255);
+}
+
+/*
+ * Rundown items
+ */
+#frameItem, #frameStatus
+{
+    background-color: transparent;
+    border-radius: 0px;
+}
+#labelThumbnail
+{
+    border-width: 1px;
+    image: url(:/Graphics/Images/Checkerboard.png);
+}
+#labelLabel, #labelNoteField
+{
+    font-size: 13px;
+}
+#labelChannel, #labelVideolayer, #labelDelay, #labelFlashlayer, #labelDevice, #labelRemoteTriggerId, #labelGpiOutputPort, #labelDuration
+{
+    color: rgba(190, 190, 190, 255);
+    font-style: italic;
+}
+
+/*
+ * RundownWidget
+ */
+#frameRundownSpacer
+{
+    min-height: 1px;
+}
+
+#toolButtonRundownDropdown
+{
+    background-color: transparent;
+    border-width: 0px;
+    image: url(:/Graphics/Images/Dropdown.png);
+}
+#toolButtonRundownDropdown::hover
+{
+    image: url(:/Graphics/Images/DropdownHover.png);
+}
+
+#tabWidgetRundown::pane
+{
+    border-width: 0px;
+
+    position: absolute;
+    top: 0px;
+}
+#tabWidgetRundown QTabBar::tab
+{
+    border-bottom-width: 0px;
+}
+#tabWidgetRundown QTabBar::tab:selected
+{
+    padding-bottom: 3px;
+}
+
+#treeWidgetRundown
+{
+    background-color: rgba(28, 28, 28, 255);
+    border-width: 0px;
+
+    border-top-color: rgba(70, 115, 195, 255);
+    border-top-width: 1px;
+}
+#treeWidgetRundown::item:selected
+{
+    background-color: rgba(0, 255, 0, 64);
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 255, 0, 255);
+}
+#treeWidgetRundown::item:has-children
+{
+    background-color: transparent;
+}
+#treeWidgetRundown::item:has-children:selected
+{
+    background-color: rgba(0, 255, 0, 64);
+}
+#treeWidgetRundown::branch
+{
+    background-color: rgba(28, 28, 28, 255);
+}
+
+/*
+ * ActionWidget
+ */
+#tabWidgetAction::pane
+{
+    border-width: 0px;
+
+    position: absolute;
+    top: 0px;
+}
+#tabWidgetAction QTabBar::tab
+{
+    border-bottom-width: 0px;
+}
+#tabWidgetAction QTabBar::tab:selected
+{
+    padding-bottom: 3px;
+}
+
+#listWidgetAction
+{
+    background-color: rgba(65, 65, 65, 255);
+    border-top-left-radius: 0px;
+}
+#listWidgetAction::item
+{
+    background-color: rgba(28, 28, 28, 255);
+    border-color: rgba(65, 65, 65, 255);
+    border-style: solid;
+    border-width: 1px;
+
+    min-width: 64px;
+    min-height: 64px;
+}
+
+/*
+ * PreviewWidget
+ */
+#labelPreview
+{
+    image: url(:/Graphics/Images/Checkerboard.png);
+}
+#tabPreview
+{
+    background-color: rgba(35, 35, 35, 255);
+    border-width: 0px;
+}
+
+#tabWidgetPreview::pane
+{
+    background-color: rgba(35, 35, 35, 255);
+    border-bottom-color: rgba(45, 45, 45, 255);
+    top: 0px;
+}
+#tabWidgetPreview QTabBar::tab
+{
+    background-color: transparent;
+}
+#tabWidgetPreview QTabBar::tab:selected
+{
+    padding-bottom: 3px;
+}
+
+#toolButtonPreviewDropdown
+{
+    background-color: transparent;
+    border-width: 0px;
+    image: url(:/Graphics/Images/Dropdown.png);
+}
+#toolButtonPreviewDropdown::hover
+{
+    image: url(:/Graphics/Images/DropdownHover.png);
+}
+
+/*
+ * AudioLevelsWidget
+ */
+#tabAudioLevels
+{
+    background-color: rgba(35, 35, 35, 255);
+}
+
+#tabWidgetAudioLevels::pane
+{
+    background-color: rgba(35, 35, 35, 255);
+    border-bottom-color: rgba(45, 45, 45, 255);
+    top: 0px;
+}
+#tabWidgetAudioLevels QTabBar::tab
+{
+    background-color: transparent;
+}
+#tabWidgetAudioLevels QTabBar::tab:selected
+{
+    padding-bottom: 3px;
+}
+
+#toolButtonAudioLevelsDropdown
+{
+    background-color: transparent;
+    border-width: 0px;
+    image: url(:/Graphics/Images/Dropdown.png);
+}
+#toolButtonAudioLevelsDropdown::hover
+{
+    image: url(:/Graphics/Images/DropdownHover.png);
+}
+
+/*
+ * AudioMeterWidget
+ */
+#labelAudioMeterChannel
+{
+    background-color: transparent;
+    color: rgba(128, 128, 128, 255);
+    font-size: 8px;
+}
+#labelAudioMeter0, #labelAudioMeter9, #labelAudioMeter20, #labelAudioMeter60
+{
+    color: rgba(128, 128, 128, 255);
+    font-size: 8px;
+}
+
+#progressBarAudioMeter
+{
+    border-color: rgba(65, 65, 65, 255);
+    border-style: solid;
+    border-width: 1px;
+}
+#progressBarAudioMeter::chunk
+{
+    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 green, stop: 1 lime);
+}
+
+/*
+ * OscTimeWidget
+ */
+#labelOscTime
+{
+    font-size: 13px;
+}
+#labelOscInTime, #labelOscOutTime
+{
+    color: rgba(190, 190, 190, 255);
+    font-size: 11px;
+}
+
+#progressBarOscTime
+{
+    border-color: rgba(0, 255, 0, 255);
+    border-radius: 0px;
+}
+#progressBarOscTime::chunk
+{
+    background-color: green;
+}
+
+/*
+ * Dialog backgrounds
+ */
+#AboutDialog, #HelpDialog, #DeviceDialog, #ImportDeviceDialog, #TriCasterDeviceDialog, #ImportTriCasterDeviceDialog,
+#AtemDeviceDialog, #ImportAtemDeviceDialog, #OscOutputDialog, #TemplateDataDialog, #LiveDialog, #PresetDialog, #OpenRundownFromUrlDialog
+{
+    background-color: rgba(35, 35, 35, 255);
+}
+
+/*
+ * AboutWidget
+ */
+#labelApplicationVersion
+{
+    font-size: 13px;
+}
+
+/*
+ * LiveWidget
+ */
+#labelLive
+{
+    image: url(:/Graphics/Images/StreamNotAvailable.png);
+}
+#tabLive
+{
+    background-color: rgba(35, 35, 35, 255);
+    border-width: 0px;
+}
+
+#tabWidgetLive::pane
+{
+    background-color: rgba(35, 35, 35, 255);
+    border-bottom-color: rgba(45, 45, 45, 255);
+    top: 0px;
+}
+#tabWidgetLive QTabBar::tab
+{
+    background-color: transparent;
+}
+#tabWidgetLive QTabBar::tab:selected
+{
+    padding-bottom: 3px;
+}
+
+#toolButtonLiveDropdown
+{
+    background-color: transparent;
+    border-width: 0px;
+    image: url(:/Graphics/Images/Dropdown.png);
+}
+#toolButtonLiveDropdown::hover
+{
+    image: url(:/Graphics/Images/DropdownHover.png);
+}
+
+/*
+ * DurationWidget
+ */
+#lcdNumber
+{
+    color: rgba(200, 65, 65, 255);
+}
+#lcdNumberShadowHour
+{
+    color: rgba(35, 35, 35, 255);
+}
+#lcdNumberShadowMinute
+{
+    color: rgba(35, 35, 35, 255);
+}
+#lcdNumberShadowSecond
+{
+    color: rgba(35, 35, 35, 255);
+}
+#lcdNumberShadowMillisecond
+{
+    color: rgba(35, 35, 35, 255);
+}
+
+#progressBarDuration
+{
+    border-color: rgba(65, 65, 65, 255);
+    border-style: solid;
+    border-width: 1px;
+}
+#progressBarDuration::chunk
+{
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 green, stop: 1 lime);
+}
+
+#labelZero, #labelCountdownDuration
+{
+    color: rgba(190, 190, 190, 255);
+    font-size: 13px;
+}
+
+/*
+ * InspectorHttpGetWidget / InspectorHttpPostWidget
+ */
+#treeWidgetHttpData
+{
+    alternate-background-color: rgba(35, 35, 35, 255);
+}

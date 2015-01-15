@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DeviceDialog</class>
+ <widget class="QDialog" name="DeviceDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>275</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>450</width>
+    <height>275</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>450</width>
+    <height>234</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>New CasparCG Server</string>
+  </property>
+  <widget class="QLineEdit" name="lineEditUsername">
+   <property name="geometry">
+    <rect>
+     <x>138</x>
+     <y>89</y>
+     <width>301</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Optional</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDescription">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>67</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Description</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonOk">
+   <property name="geometry">
+    <rect>
+     <x>364</x>
+     <y>201</y>
+     <width>75</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string>&amp;OK</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+O</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditAddress">
+   <property name="geometry">
+    <rect>
+     <x>138</x>
+     <y>37</y>
+     <width>161</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>IP address / Hostname</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelAddress">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>41</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Address</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPort">
+   <property name="geometry">
+    <rect>
+     <x>302</x>
+     <y>38</y>
+     <width>31</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Port</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelUsername">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>93</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Username</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditDescription">
+   <property name="geometry">
+    <rect>
+     <x>138</x>
+     <y>63</y>
+     <width>301</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Optional</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditPort">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>37</y>
+     <width>73</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
+   <property name="placeholderText">
+    <string>5250</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelPassword">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>117</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Password</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditPassword">
+   <property name="geometry">
+    <rect>
+     <x>138</x>
+     <y>115</y>
+     <width>301</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>Optional</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxShadow">
+   <property name="geometry">
+    <rect>
+     <x>73</x>
+     <y>206</y>
+     <width>120</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Shadow server</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditDeviceName">
+   <property name="geometry">
+    <rect>
+     <x>138</x>
+     <y>11</y>
+     <width>161</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDeviceName">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>15</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Name</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDeviceIcon">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>13</y>
+     <width>64</width>
+     <height>64</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="Widgets.qrc">:/Graphics/Images/ServerBig.png</pixmap>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="toolButtonTestConnection">
+   <property name="geometry">
+    <rect>
+     <x>417</x>
+     <y>37</y>
+     <width>22</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="toolTip">
+    <string>Test Connection</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+O</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBoxPreviewChannel">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>189</y>
+     <width>74</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="value">
+    <number>2</number>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBoxPreview">
+   <property name="geometry">
+    <rect>
+     <x>73</x>
+     <y>189</y>
+     <width>150</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Preview on channel</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditDbPassword">
+   <property name="geometry">
+    <rect>
+     <x>138</x>
+     <y>164</y>
+     <width>301</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>Database Username (Optional)</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDbPassword">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>165</y>
+     <width>80</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DbPassword</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelDbUsername">
+   <property name="geometry">
+    <rect>
+     <x>43</x>
+     <y>143</y>
+     <width>90</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>DbUsername</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditDbUsername">
+   <property name="geometry">
+    <rect>
+     <x>138</x>
+     <y>139</y>
+     <width>301</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Database Username (Optional)</string>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>lineEditDeviceName</tabstop>
+  <tabstop>lineEditAddress</tabstop>
+  <tabstop>lineEditPort</tabstop>
+  <tabstop>lineEditDescription</tabstop>
+  <tabstop>lineEditUsername</tabstop>
+  <tabstop>lineEditPassword</tabstop>
+  <tabstop>checkBoxShadow</tabstop>
+  <tabstop>checkBoxPreview</tabstop>
+  <tabstop>spinBoxPreviewChannel</tabstop>
+ </tabstops>
+ <resources>
+  <include location="Widgets.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButtonOk</sender>
+   <signal>clicked()</signal>
+   <receiver>DeviceDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>365</x>
+     <y>214</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>247</x>
+     <y>152</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEditAddress</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DeviceDialog</receiver>
+   <slot>addressChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>282</x>
+     <y>45</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>378</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEditDeviceName</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>DeviceDialog</receiver>
+   <slot>nameChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>222</x>
+     <y>16</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>342</x>
+     <y>1</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonTestConnection</sender>
+   <signal>clicked()</signal>
+   <receiver>DeviceDialog</receiver>
+   <slot>testConnection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>425</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>449</x>
+     <y>44</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBoxPreview</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>DeviceDialog</receiver>
+   <slot>previewChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>152</x>
+     <y>183</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1</x>
+     <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>addressFinished()</slot>
+  <slot>nameFinished()</slot>
+  <slot>testConnection()</slot>
+  <slot>okClicked()</slot>
+  <slot>nameChanged(QString)</slot>
+  <slot>addressChanged(QString)</slot>
+  <slot>previewChanged(int)</slot>
+ </slots>
+</ui>

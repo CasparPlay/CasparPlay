@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OscTimeWidget</class>
+ <widget class="QWidget" name="OscTimeWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>220</width>
+    <height>31</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <widget class="QProgressBar" name="progressBarOscTime">
+   <property name="geometry">
+    <rect>
+     <x>64</x>
+     <y>3</y>
+     <width>89</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="maximum">
+    <number>999999999</number>
+   </property>
+   <property name="textVisible">
+    <bool>false</bool>
+   </property>
+   <property name="format">
+    <string>%p%</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelOscTime">
+   <property name="geometry">
+    <rect>
+     <x>68</x>
+     <y>5</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>00:00:00:00</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelOscInTime">
+   <property name="geometry">
+    <rect>
+     <x>2</x>
+     <y>8</y>
+     <width>67</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>00:00:00:00</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelOscOutTime">
+   <property name="geometry">
+    <rect>
+     <x>151</x>
+     <y>8</y>
+     <width>67</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>00:00:00:00</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+ <slots>
+  <slot>durationChanged(int)</slot>
+  <slot>loopChanged(int)</slot>
+  <slot>transitionChanged(QString)</slot>
+  <slot>directionChanged(QString)</slot>
+  <slot>seekChanged(int)</slot>
+  <slot>lengthChanged(int)</slot>
+  <slot>tweenChanged(QString)</slot>
+  <slot>resetTransition(QString)</slot>
+  <slot>resetDuration(QString)</slot>
+  <slot>resetTween(QString)</slot>
+  <slot>resetDirection(QString)</slot>
+  <slot>resetSeek(QString)</slot>
+  <slot>resetLength(QString)</slot>
+  <slot>resetLoop(QString)</slot>
+  <slot>freezeOnLoadChanged(int)</slot>
+  <slot>resetFreezeOnLoad(QString)</slot>
+  <slot>resetUseAuto(QString)</slot>
+  <slot>useAutoChanged(int)</slot>
+  <slot>resetTriggerOnNext(QString)</slot>
+  <slot>triggerOnNextChanged(int)</slot>
+ </slots>
+</ui>

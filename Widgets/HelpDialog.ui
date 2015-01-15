@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HelpDialog</class>
+ <widget class="QDialog" name="HelpDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>541</width>
+    <height>462</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>541</width>
+    <height>462</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>541</width>
+    <height>462</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Help</string>
+  </property>
+  <widget class="QPushButton" name="pushButtonOk">
+   <property name="geometry">
+    <rect>
+     <x>233</x>
+     <y>429</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="text">
+    <string>&amp;OK</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="plainTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>521</width>
+     <height>407</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="plainText">
+    <string>F1
+Function: Stop 
+Description: Call stop on selected item in the rundown.
+
+F2
+Function: Play
+Description: Call play on selected item in the rundown.
+
+F3
+Function: Load
+Description: Call load on selected item in the rundown.
+
+F4
+Function: Pause
+Description: Call pause on selected item in the rundown.
+
+F5
+Function: Next
+Description: Call next on selected item in the rundown.
+
+F6
+Function: Update
+Description: Call update on selected item in the rundown.
+
+F7
+Function: Invoke
+Description: Call invoke on selected item in the rundown.
+
+F10
+Function: Clear
+Description: Call clear on selected item in the rundown.
+
+F11
+Function: Clear Layer
+Description: Call clear on selected items video layer in the rundown.
+
+F12
+Function: Clear Channel
+Description: Call clear on selected items channel in the rundown.
+
+Alt+1 - Alt+5
+Function: Rundown
+Description: Switch between rundown tabs.
+
+Ctrl+G / Ctrl+U
+Functioin: Group / Ungroup
+Description: Group / Ungroup one or more items in the rundown.
+
+Ctrl+D
+Function: Duplicate
+Description: Duplicate selected item in the rundown.
+
+Ctrl+C / Ctrl+V
+Function: Copy / Paste
+Description: Copy / Paste selected item in the rundown.
+
+Ctrl+X
+Function: Cut
+Description: Cut selected item in the rundown.
+
+Ctrl+Up / Ctrl+Down
+Function: Navigation.
+Description: Move item up / down in the rundown.
+
+Ctrl+Right / Ctrl+Left
+Function: Navigation
+Description: Move item in / out of a group in the rundown.
+
+Delete
+Function: Delete
+Description Delete item / group in the rundown.
+
+Ctrl+F
+Function: Fullscreen
+Description: Toggle between fullscreen and normal window.
+
+Ctrl+I / Ctrl+E
+Function: Import / Export
+Description: Import / Export rundown from / to disk.
+
+Ctrl+H
+Function: Help
+Description: Show this help dialog.</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButtonOk</sender>
+   <signal>clicked()</signal>
+   <receiver>HelpDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>278</x>
+     <y>429</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>356</x>
+     <y>230</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

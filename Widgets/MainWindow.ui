@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1460</width>
+    <height>950</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CasparPlay</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="margin">
+     <number>6</number>
+    </property>
+    <item>
+     <widget class="QSplitter" name="splitterVertical">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>1</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QWidget" name="layoutWidget1">
+       <layout class="QVBoxLayout" name="verticalLayoutLeft">
+        <item>
+         <widget class="PreviewWidget" name="widgetPreview" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>289</width>
+            <height>186</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="LibraryWidget" name="widgetLibrary" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>289</width>
+            <height>0</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget2">
+       <layout class="QVBoxLayout" name="verticalLayoutMiddle">
+        <item>
+         <widget class="DurationWidget" name="widgetDuration" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>188</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSplitter" name="splitterHorizontal">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+            <horstretch>1</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>177</height>
+           </size>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="RundownWidget" name="widgetRundown" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="ActionWidget" name="widgetAction" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>200</height>
+            </size>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget3">
+       <layout class="QVBoxLayout" name="verticalLayoutRight">
+        <property name="spacing">
+         <number>6</number>
+        </property>
+        <item>
+         <widget class="LiveWidget" name="widgetLive" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>289</width>
+            <height>186</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="AudioLevelsWidget" name="widgetAudioLevels" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>289</width>
+            <height>130</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="InspectorWidget" name="widgetInspector" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>289</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>27</height>
+    </size>
+   </property>
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PreviewWidget</class>
+   <extends>QWidget</extends>
+   <header>PreviewWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>InspectorWidget</class>
+   <extends>QWidget</extends>
+   <header>Inspector/InspectorWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>LibraryWidget</class>
+   <extends>QWidget</extends>
+   <header>Library/LibraryWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>RundownWidget</class>
+   <extends>QWidget</extends>
+   <header>Rundown/RundownWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ActionWidget</class>
+   <extends>QWidget</extends>
+   <header>Action/ActionWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>AudioLevelsWidget</class>
+   <extends>QWidget</extends>
+   <header>AudioLevelsWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>LiveWidget</class>
+   <extends>QWidget</extends>
+   <header>LiveWidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DurationWidget</class>
+   <extends>QWidget</extends>
+   <header>DurationWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+ <slots>
+  <slot>addMedia()</slot>
+  <slot>removeMedia()</slot>
+  <slot>toggleFullscreen()</slot>
+  <slot>toggleMaximize()</slot>
+ </slots>
+</ui>

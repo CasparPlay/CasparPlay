@@ -1,0 +1,126 @@
+CasparPlay Client
+=================
+
+	CasparPlay is a client for CasparCG Server derived from CasparCG Client. It contains few
+additional features on top of stock CasparCG Client available on github.com/casparcg/client.
+This client is meant to work with CCGClient (github.com/sysnova/ccgclient), CCGClient works
+as a server for CasparPlay Client and acts as client for the CasparCG Server. Features included
+in this CasparPlay Client are below:
+
+		a/ Prepare Rundown
+		b/ Generate Report
+		c/ Send To Database
+		d/ Text Scroller
+
+	a) PREPARE RUNDOWN: This option could be found under "File" menu. This option is
+	meant to work with Razuna Asset Management System. A "Open File" window will appear
+	and will accept a .txt file with name of clips/videos. After selecting the file, all
+	the necessary information regarding the video files will appear. This will allow user
+	to check to make sure whether the video informations are correct or not. If infor-
+	mations are correct in that case "Confirm Playlist" needs to be pressed and it will
+	send commands to the "copyer" daemon (see it's documentation for more info) which is
+	responsible for copying the video files into CasparCG server media path.
+
+	b) GENERATION REPORT: This feature is yet to fully develop. This feature basically
+	sends a command to the CCGClient (See it's documentation for details) for a particular
+	date and CCGClient returns back commercial name and what time it was played on.
+
+	c) SEND TO DATABASE: This feature is developed to sent playlist to the casparcg server's
+	MySQL database. CCGClient on that server will be responsible for playout the videos. Stock
+	casparcg client movie widget has been modified and two more option i) Timecode (when this
+	video will be played) ii) Commercial (whether that particular video is a commercial or not)
+	has been added. Timecode is to be used as start time of the video and should only be used
+	for the first video.
+
+	d) TEXT SCROLLER: This feature is a news scrolling feature. News displaying backend is
+	based on AKCESS template found on CasparCG forum. Front end has been changed but the
+	backend remains same.
+
+
+SETTING UP CASPARCG SERVER FOR FAILOVER/REDUNDANCY:
+===================================================
+	One of the main reasons for developing CasparPlay and CCGClient is to make sure redundancy.
+To make sure playout continues in 24x7 style we had to setup two CasparCG servers one as primary
+and a shadow server as secondary server. We wanted to setup servers in such a way if primary goes
+down as if secondary server continues playing. With stock CasparCG client available it's possible
+to achieve this. But, there's two problem -
+		a) In case of one server goes off, other server continues playing but when the
+		dead server is up for running it skips the video that other server is playing
+		instead it picks the next video and therefore breaks the sequence. So, at the time
+		of recovery failed server doesn't sync up with the other server.
+
+		b) The other problem is if for some reason CasparCG Client fails, playout might
+		stop due to the fact that server will not get any commands from the client.
+
+In according to deal with the above problems we developed CasparPlay client and a BackToBack client
+known as CCGClient. CasparPlay client is modified version of CasparCG client and CCGClient is a
+python script which continuously fetches videos from a database. CasparPlay has a feature to send
+playlist into database (described above) therefore even if it's not available or goes down playout
+will continue. CCGClient can be found at https://github.com/sysnova/CCGClient and how to configure
+can be found at that link. Following steps are required for configuring as failover:
+
+		1. Download CCGClient from https://github.com/sysnova/CCGClient.
+		2. Download and install the prerequisites a/ Python-2.7, b/ MySQL-python-2.7 and
+		    c/ MySQL 5.6.
+
+		3. Create a database name casparcg and dump the schema.sql file found under
+		   CCGClient.
+
+		4. Configure the sample configuration file csclient.ini could be found under
+		   AppData\Local.
+
+		   A sample configuration file is like below:
+
+			[General]
+			buddyip=192.168.152.8
+			buddydbname=casparcg
+			buddydbuser=dbuser
+			buddydbpass=password
+			serverip=127.0.0.1
+			serverdbname=casparcg
+			serverdbuser=dbuser
+			serverdbpass=password
+			logpath=casparcgserver\log
+
+		   buddyip is the ipaddress of the redundant server used for backup, buddydbname
+		   is the database name created by the script, buddydbuser and buddydbpass are the
+		   username and password of buddy database, respectively. Likewise - serverip,
+		   serverdbname, serverdbpass, serverdbuser are host server ip, database name,
+		   database password and database username, respectively. And, finally logpath is
+		   the location of the directory of the log files.
+
+		5. CasparCG Configuration: CasparCG "Predifined Clients" needs to be configured
+		   properly. On the main server, buddy server IP, Port no 7250 (fixed as of now)
+		   needs to be configured as Predifined Client and vice-versa for the buddy server.
+
+		6. Start the CasparCG server.
+
+		7. Now run CCGClient.py script.
+
+		8. Add the servers IP on CasparPlay client and mark one server as shadow also fill
+		   up the Database Username and Password field.
+
+		Above steps should be appropriate for setting up two CasparCG server for redundancy.
+
+CONFIGURING CASPARPLAY WITH RAZUNA:
+===================================
+	1. Download and install razuna from razuna.org and run razuna (follow razuna's manual on
+	   how to do it).
+
+	2. Create a razuna user and copy it's API key from the user's "My Info" section.
+
+	3. In CasparPlay, open it's "Settings" window, goto Razuna section, click on "+" icon a
+	   small window will appear, give a name and paste the api key. Now CasparPlay is ready
+	   to fetch metadata from razuna and it will be displayed when PREPARE RUNDOWN option is
+	   invoked.
+
+	4. Finally, download copyer program from https://github.com/sysnova/Copyer. Compile and
+	   run it as:
+		./copyer -d "media path of the mounted casparcgserver"
+
+	If CasparPlay isn't configured with Razuna then "Prepare Rundown" option will not work.
+	Note that, it'll take a file name as input - which should contain the clip names and these
+	clip names must be same as how they are named while keeping at Razuna. Upon confirmation
+	of "Confirm Playlist" it'll start copying the media files from razuna to CasparCG media
+	path. Then those media files will be displayed on "Videos" section and are ready for creat-
+	ing playlist.

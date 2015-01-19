@@ -3,7 +3,7 @@ CasparPlay Client
 
 	CasparPlay is a client for CasparCG Server derived from CasparCG Client. It contains few
 additional features on top of stock CasparCG Client available on github.com/casparcg/client.
-This client is meant to work with CCGClient (github.com/sysnova/ccgclient), CCGClient works
+This client is meant to work with CCGClient (github.com/CasparPlay/ccgclient), CCGClient works
 as a server for CasparPlay Client and acts as client for the CasparCG Server. Features included
 in this CasparPlay Client are below:
 
@@ -56,10 +56,10 @@ In according to deal with the above problems we developed CasparPlay client and 
 known as CCGClient. CasparPlay client is modified version of CasparCG client and CCGClient is a
 python script which continuously fetches videos from a database. CasparPlay has a feature to send
 playlist into database (described above) therefore even if it's not available or goes down playout
-will continue. CCGClient can be found at https://github.com/sysnova/CCGClient and how to configure
+will continue. CCGClient can be found at https://github.com/CasparPlay/CCGClient and how to configure
 can be found at that link. Following steps are required for configuring as failover:
 
-		1. Download CCGClient from https://github.com/sysnova/CCGClient.
+		1. Download CCGClient from https://github.com/CasparPlay/CCGClient.
 		2. Download and install the prerequisites a/ Python-2.7, b/ MySQL-python-2.7 and
 		    c/ MySQL 5.6.
 
@@ -114,7 +114,7 @@ CONFIGURING CASPARPLAY WITH RAZUNA:
 	   to fetch metadata from razuna and it will be displayed when PREPARE RUNDOWN option is
 	   invoked.
 
-	4. Finally, download copyer program from https://github.com/sysnova/Copyer. Compile and
+	4. Finally, download copyer program from https://github.com/CasparPlay/Copyer. Compile and
 	   run it as:
 		./copyer -d "media path of the mounted casparcgserver"
 
